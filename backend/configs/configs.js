@@ -16,7 +16,7 @@ const configs = {
     REDIS: {
         PORT: process.env.REDIS_PORT || 6379,
         HOST: process.env.REDIS_HOST || "127.0.0.1",
-        URI: process.env.REDIS_URI || null,
+        URI: process.env.REDIS_URI || "rediss://default:ATamAAIncDJlM2ZlYzZmOTA2N2M0OTIwYTE4YzI3M2NkMTUyZjBkZHAyMTM5OTA@mighty-ostrich-13990.upstash.io:6379",
         getUrl() {
             if (this.URI) return this.URI;
             return `redis://${this.HOST}:${this.PORT}`;
